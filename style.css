@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  padding: 10px;
+}
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  min-height: 600px;
+}
+.todo-app h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+.todo-app h2 img {
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  border-radius: 30px;
+  background: #edeef0;
+  padding-left: 20px;
+}
+.todo-app input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-style: 14px;
+}
+.todo-app button {
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #ff5945;
+  border-radius: 30px;
+  font-style: 16px;
+  cursor: pointer;
+}
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 50px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: " ";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url("images/unchecked.png");
+  background-position: center;
+  background-size: cover;
+  top: 12px;
+  left: 8px;
+}
+ul li.checked {
+  text-decoration: line-through;
+  color: #707070;
+}
+ul li.checked::before {
+  background-image: url("images/checked.png");
+  
+}
+
+ul li span {
+  color: #555;
+  font-weight: 700;
+  right: 20px;
+  display: inline-block;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+ul li span:hover {
+  background: #f0eeee;
+}
