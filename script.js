@@ -1,11 +1,12 @@
 let todoBox = document.querySelector( '.todo-box' );
-let todoBtn = document.querySelector( '.todo-btn' );
+let btn = document.querySelectorAll( '.btn' );
+
+let btnArr = Array.from( btn );
  
 
 
-
-
-todoBtn.addEventListener( 'click', () => {
+btnArr.map( ( item ) => {
+    item.addEventListener( 'click', () => {
     if(todoBox.value == ''){
         alert( 'Please enter a task' );
     } else {
@@ -29,14 +30,25 @@ todoBtn.addEventListener( 'click', () => {
 
         
 
-    } todoBox.value = '';
+        }
+        todoBox.value = '';
+        
     
 } ); 
+})
 
+let todoBtn = document.querySelector( '.todo-btn' );
+let todoBtn2 = document.querySelector( '.todo-btn-2' );
 
 
 todoBox.addEventListener( 'keyup', ( e ) => {
     if ( e.keyCode === 13 ) {
         todoBtn.click();
+    }
+})
+
+todoBtn2.addEventListener( 'click', (e) => {
+    if ( e.keyCode === 13 ) {
+        todoBtn2.click();
     }
 })
