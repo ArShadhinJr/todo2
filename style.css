@@ -53,7 +53,7 @@
   outline: none;
   background: transparent;
   padding: 10px;
-  font-style: 14px;
+  font-style: 15px;
 }
 .todo-app button {
   color: #fff;
@@ -118,5 +118,13 @@ ul li span:hover {
   .todo-app {
     margin: 20px auto 20px;
   padding: 40px 30px 70px;
+  
+  }
+  .todo-app button {
+    padding: 16px 50px;
+
+  }
+  .row{
+  width: 100%;
   }
 }
